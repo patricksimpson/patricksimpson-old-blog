@@ -1,0 +1,43 @@
+doctype
+html
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="/styles/pure-min.css")
+    link(rel="stylesheet" href="/styles/grids-responsive-min.css")
+    link(rel="stylesheet" href="/styles/main.css")
+  body
+    div.header
+      a.site-link(href="/")
+        h1.site-title Patrick Simpson
+        div.intro-text A software developer from Dayton, Ohio
+    div.nav
+      a.link(href="/posts") Posts
+      a.link(href="/projects") Projects
+      a.link(href="/talking") Talking
+      a.link(href="/about") About
+    div.content
+      != yield
+    footer.footer Developed with purpose, 2014
+
+  script(src="/bower_components/instafeed.min/index.js")
+  script(src="/bower_components/jquery/dist/jquery.min.js")
+  script(src="/bower_components/twitterFetcher_min/index.js")
+  script(type='text/javascript').
+    var config1 = {
+      "id": '525495582903652352',
+      "showRetweet": false,
+      "domId": 'latesttweet',
+      "maxTweets": 1,
+      "enableLinks": true
+    };
+    twitterFetcher.fetch(config1);
+      var feed = new Instafeed({
+          get: 'user',
+          userId: 235087439,
+          limit: 4,
+          sortBy: 'most-recent',
+          accessToken: '235087439.467ede5.30038cf5e86144a39b71af2972f3b0e0',
+          resolution: 'standard_resolution'
+
+      });
+      feed.run();

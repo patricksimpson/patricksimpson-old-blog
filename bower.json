@@ -1,0 +1,21 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "authors": [
+    "patricksimpson <izerop@gmail.com>"
+  ],
+  "description": "A blog",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "instafeed.min": "https://raw.githubusercontent.com/stevenschobert/instafeed.js/master/instafeed.min.js",
+    "jquery": "~2.1.1",
+    "twitterFetcher_min": "https://raw.githubusercontent.com/jasonmayes/Twitter-Post-Fetcher/master/js/twitterFetcher_min.js"
+  }
+}

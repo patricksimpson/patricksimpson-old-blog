@@ -1,0 +1,22 @@
+a, .about a, .link {
+  color: $c-link;
+  text-decoration: none;
+  transition: all 0.5s;
+  &:hover {
+    color: darken( $c-link, 20% );
+  }
+}
+
+.site-link {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten(black, 20%);
+  }
+}
+
+.inline-link {
+  @extend .link;
+  color: inherit;
+}

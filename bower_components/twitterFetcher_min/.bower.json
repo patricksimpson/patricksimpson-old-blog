@@ -1,0 +1,14 @@
+{
+  "name": "twitterFetcher_min",
+  "_cacheHeaders": {
+    "ETag": "\"f99ccfb874eb298a16c4ebf3c8a173e8ebb05bd4\"",
+    "Content-Length": "4617",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:f99ccfb87",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/jasonmayes/Twitter-Post-Fetcher/master/js/twitterFetcher_min.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/jasonmayes/Twitter-Post-Fetcher/master/js/twitterFetcher_min.js",
+  "_direct": true
+}

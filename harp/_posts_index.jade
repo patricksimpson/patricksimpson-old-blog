@@ -1,0 +1,8 @@
+.wrapper
+  div.block
+    h2.block-title Posts
+    - var posts = [];for(t in public.posts._data) { posts.push(t) };posts.reverse()
+    ul.list
+      for post in posts
+        li.list--item
+          a.list--link(href="/posts/#{ post }")= public.posts._data[post].title

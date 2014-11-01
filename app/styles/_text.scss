@@ -1,0 +1,27 @@
+.text {
+  padding: 0;
+  margin: 0.25em;
+}
+
+.site-title {
+  font-size: 3em;
+  padding: 0.25em;
+  margin: 0;
+}
+
+.intro-text {
+  font-size: 1.25em;
+  padding: 0.5em;
+}
+
+.stuff {
+  font-style: italic;
+  padding: 0 0.25em;
+}
+
+
+.heading_sub {
+  font-size: 1em;
+  margin: 0.4em 0;
+  border-bottom: 1px solid darken($c-gray, 20%);
+}
