@@ -5,6 +5,13 @@
   padding: 1em 0;
 }
 
+.block-inner {
+  @extend .block;
+  margin: 0 1em;
+  line-height: 1.5;
+  font-size: 1.15em;
+  padding: 0;
+}
 .content {
   background-color: $c-content_bg;
 }
@@ -19,7 +26,7 @@
 
 .about-block {
   background-color: $c-about_bg;
-  color: black;
+  color: $c-about-block-text;
 }
 
 

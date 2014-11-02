@@ -5,10 +5,11 @@ BASE_SCRIPTS_DIR    = BASE_DIR + 'scripts/'
 BASE_VENDOR_DIR     = 'bower_components/'
 BASE_ASSETS_DIR     = BASE_DIR + 'assets/'
 BASE_STYLES_DIR     = BASE_DIR + 'styles/'
-BASE_POSTS_DIR      = BASE_DIR + 'posts/'
+BASE_POSTS_DIR      = 'posts/'
 
 # Harp paths
-HARP_DIR           = 'harp/'
+HARP                = 'harp'
+HARP_DIR            = HARP + '/'
 HARP_TEMPLATE_DIR   = HARP_DIR
 HARP_SCRIPTS_DIR    = HARP_DIR + 'scripts/'
 HARP_VENDOR_DIR     = HARP_DIR + 'scripts/vendors/'
@@ -45,32 +46,35 @@ replace     = require('gulp-replace')
 html2jade   = require('gulp-html2jade')
 md          = require('html-md')
 
-gulp.task "serve", ->
-  harp.server __dirname+'/harp',
+gulp.task 'serve', ->
+  harp.server __dirname + '/' + HARP,
     port: 9000
   , ->
     browserSync
-      proxy: "localhost:9000"
+      proxy: 'localhost:9000'
       open: false
       notify:
         styles: [
-          "opacity: 0"
-          "position: absolute"
+          'opacity: 0'
+          'position: absolute'
         ]
 
-    gulp.watch "app/styles/*", ->
+    gulp.watch 'app/styles/*', ->
       reload "main.css",
         stream: true
 
-    gulp.watch [HARP_DIR + '*', HARP_POSTS_DIR + '*', HARP_STYLES_DIR + '*'], ->
+    gulp.watch [
+      HARP_POSTS_DIR + '/_data.json'
+      ], ->
       reload()
 
-    gulp.watch [BASE_TEMPLATE_DIR + '*', BASE_STYLES_DIR + '*', BASE_SCRIPTS_DIR + '*'], ['post']
-
-    gulp.watch ["posts/*.md"], ['post']
+    gulp.watch [
+      BASE_POSTS_DIR + '*.md'
+      BASE_TEMPLATE_DIR + '*'
+      BASE_STYLES_DIR + '*'
+      BASE_SCRIPTS_DIR + '*'], ['post']
 
 copyFiles = (input, output) ->
-  console.log 'copy files:' + input
   files = glob.sync(input)
   stream = files.map((file) ->
     dir = path.dirname(file)
@@ -80,22 +84,22 @@ copyFiles = (input, output) ->
       .pipe(gulp.dest('./'))
   )
   es.merge.apply(es, stream)
-  console.log 'copy complete.'
 
 postInstall = ->
   # Copy base templates
-  console.log 'post install'
   copyFiles(BASE_TEMPLATE_DIR + '*' + TEMPLATE_EXT, HARP_DIR)
   copyFiles(BASE_SCRIPTS_DIR + '*' + SCRIPT_EXT, HARP_SCRIPTS_DIR)
   copyFiles(BASE_STYLES_DIR + '*' + STYLE_EXT, HARP_STYLES_DIR)
   copyFiles(BASE_ASSETS_DIR + '*', HARP_ASSETS_DIR)
   files = glob.sync(BASE_TEMPLATE_DIR + '*' + TEMPLATE_EXT)
+  gulp.src( [ BASE_VENDOR_DIR + '*/**' ], { "base" : "." })
+    .pipe(gulp.dest(HARP_VENDOR_DIR))
 
 gulp.task 'post-clean', (cb) ->
   del('harp', cb)
 
 gulp.task 'post-setup', ->
-  mkdirp('./harp')
+  mkdirp('./' + HARP)
   postInstall()
 
 gulp.task 'post-markdown', ->
@@ -103,15 +107,14 @@ gulp.task 'post-markdown', ->
     .pipe(markdown(
       smartypants: true
     ))
-    .pipe(gulp.dest('harp/posts/meta'))
+    .pipe(gulp.dest(HARP_POSTS_DIR + 'meta'))
 
 gulp.task 'post-json', ->
-  files = glob.sync('harp/posts/meta/*.json')
+  files = glob.sync(HARP_POSTS_DIR + 'meta/*.json')
   streams = files.map((file) ->
     dir = path.dirname(file)
     filename = path.basename(file, '.json')
     data = JSON.parse(fs.readFileSync(file, 'utf8'))
-    console.log 'create the data file'
     # Remove the body, we will partialize this later.
     delete data.body
     data.order = moment(data.date).unix()
@@ -123,37 +126,34 @@ gulp.task 'post-json', ->
   es.merge.apply(es, streams)
 
 gulp.task 'post-data', ->
-  gulp.src('harp/posts/meta/temp/*.json')
-    .pipe(extend('harp/posts/_data.json'))
+  gulp.src(HARP_POSTS_DIR + 'meta/temp/*.json')
+    .pipe(extend(HARP_POSTS_DIR + '_data.json'))
     .pipe(gulp.dest('./'))
 
 gulp.task 'post-compile', ->
-  gulp.src('app/templates/_posts_index.jade')
-  .pipe(rename('harp/posts/index.jade'))
+  gulp.src(BASE_TEMPLATE_DIR + '_posts_index.jade')
+  .pipe(rename(HARP_POSTS_DIR + 'index.jade'))
   .pipe(gulp.dest('./'))
-  # Glob the json data files.
-  files = glob.sync('harp/posts/meta/*.json')
+  files = glob.sync(HARP_POSTS_DIR + 'meta/*.json')
   streams = files.map((file) ->
     dir = path.dirname(file)
     filename = path.basename(file, '.json')
     data = JSON.parse(fs.readFileSync(file, 'utf8'))
     body = data.body
     partial = 'meta/' + filename + '.html'
-    fs.writeFile('harp/posts/' + partial, body, (error) ->
-      if error
-        console.log error
+    fs.writeFile(HARP_POSTS_DIR + partial, body, (error) ->
+        if error
+          console.log error
     )
-    gulp.src('app/templates/_layout-posts.jade')
-    .pipe(rename('harp/posts/' + filename + '.jade'))
+    gulp.src(BASE_TEMPLATE_DIR + '_layout-posts.jade')
+    .pipe(rename(HARP_POSTS_DIR + filename + '.jade'))
     .pipe(replace('%BODY%', partial))
     .pipe(gulp.dest('./'))
 
   )
   es.merge.apply(es, streams)
 
-gulp.task "default", ["go"]
-
-gulp.task 'go', ->
+gulp.task 'default', ->
   runSequence('post', 'serve')
 
 gulp.task 'post', ->

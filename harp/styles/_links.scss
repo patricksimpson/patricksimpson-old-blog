@@ -8,11 +8,11 @@ a, .about a, .link {
 }
 
 .site-link {
-  color: black;
+  color: $c-site-link;
   text-decoration: none;
 
   &:hover {
-    color: lighten(black, 20%);
+    color: darken($c-site-link, 20%);
   }
 }
 

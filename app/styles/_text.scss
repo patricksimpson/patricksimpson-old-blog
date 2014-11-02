@@ -25,3 +25,12 @@
   margin: 0.4em 0;
   border-bottom: 1px solid darken($c-gray, 20%);
 }
+
+.list-post--title {
+  float: left;
+}
+.list-post--date {
+  float: right;
+  font-size: 0.75em;
+  color: #777;
+}

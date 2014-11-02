@@ -2,11 +2,11 @@
   div.block
     h2.block-title About
   .pure-u-1.pure-u-md-1-4
-    .block
-      img.big-face(src="img/patrick_abbey.jpg")
+    .block-inner
+      img.big-face(src="assets/patrick_abbey.jpg")
   .pure-u-1.pure-u-md-3-4
-    .block
-      h3.block--sub-title My life
+    .block-inner
+      h3.block--sub-title Hello, I'm Patrick
       :markdown
         I am married to the love of my life and blessed with three children.
       :markdown
@@ -17,7 +17,7 @@
         I am dedicated to my job, learning, and sharing.
   .pure-u-1.pure-u-md-1-4
     .block
-      img.big-face(src="img/family.jpg")
+      img.big-face(src="assets/family.jpg")
   .pure-u-1.pure-u-md-3-4
     .block
       h3.block--sub-title Principles
@@ -28,8 +28,9 @@
         Don't avoid challenges, big or small. Don't take the easy way out.
   .block
     h3.heading_sub Contact
-    p Email me at patrick@patricksimpson.me
-    p Twitter @SimpsonPatrick
+    p
+      a(href="mailto:patrick@patricksimpson.me") patrick@patricksimpson.me
+    p
+      a(href="https://twitter.com/SimpsonPatrick") @SimpsonPatrick
     h3.heading_sub Instagram Feed
     #instafeed.instafeed
-

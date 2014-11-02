@@ -5,4 +5,8 @@
     ul.list
       for post in posts
         li.list--item
-          a.list--link(href="/posts/#{ post }")= public.posts._data[post].title
+          a.list--link(href="/posts/#{ post }")
+            span.list-post--title= public.posts._data[post].title
+            span.list--meta.list-post--date= public.posts._data[post].date
+
+!=partial('../_about-me-footer')

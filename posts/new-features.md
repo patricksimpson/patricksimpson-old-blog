@@ -1,6 +1,6 @@
 ---
 title: New Feat - Reverse Orders
-date: 1-Nov-2014 at 2:51pm
+date: 01 Nov 2014 14:51
 synopsis: The a-typical hello world post.
 ---
 
