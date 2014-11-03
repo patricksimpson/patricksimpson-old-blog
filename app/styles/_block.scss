@@ -16,8 +16,9 @@
   background-color: $c-content_bg;
 }
 
-.block--title {
+.block-title {
   font-size: 1.35em;
+  border-bottom: 1px solid #ccc;
 }
 
 .block_with-list {

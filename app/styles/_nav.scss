@@ -6,11 +6,14 @@
 
   .link {
     transition: all 1s;
-    color: $c-dark;
+    color: $c-nav-link;
     padding: 1em 1.5em;
     display: inline-block;
+    &.active {
+      background-color: #fff;
+    }
     &:hover {
-      color: lighten($c-dark, 30%);
+      background-color: #eee;
     }
   }
 }
