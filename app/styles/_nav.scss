@@ -10,10 +10,10 @@
     padding: 1em 1.5em;
     display: inline-block;
     &.active {
-      background-color: #fff;
+      background-color: darken($c-nav_bg, 5%);
     }
     &:hover {
-      background-color: #eee;
+      background-color: lighten($c-nav_bg, 5%);
     }
   }
 }

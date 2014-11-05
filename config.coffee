@@ -101,6 +101,7 @@ gulp.task 'post-clean', (cb) ->
 gulp.task 'post-setup', ->
   mkdirp('./' + HARP)
   postInstall()
+  copyFiles(BASE_TEMPLATE_DIR + '_posts.json', HARP_POSTS_DIR + 'meta/temp/')
 
 gulp.task 'post-markdown', ->
   gulp.src('posts/*.md')
@@ -129,6 +130,8 @@ gulp.task 'post-data', ->
   gulp.src(HARP_POSTS_DIR + 'meta/temp/*.json')
     .pipe(extend(HARP_POSTS_DIR + '_data.json'))
     .pipe(gulp.dest('./'))
+  gulp.src(BASE_TEMPLATE_DIR + '*.json')
+    .pipe(gulp.dest(HARP_DIR))
 
 gulp.task 'post-compile', ->
   gulp.src(BASE_TEMPLATE_DIR + '_posts_index.jade')

@@ -1,0 +1,10 @@
+{
+  "globals": {
+    "title": "Home",
+    "description": "A software developer from Dayton, Ohio. Aspiring full-stack developer, Coffee Lover, and more."
+  },
+  "posts": {
+    "title": "Posts",
+    "description": "Writings, publications, articles all written by Patrick Simpson. Mostly about Life and Code."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "about": {
+    "title": "About",
+    "description": "Interesting facts about Patrick Simpson. Maybe a little too interesting..."
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "A list of projects by Patrick Simpson."
+  },
+  "posts": {
+    "title": "Posts",
+    "description": "Writings, publications, articles all written by Patrick Simpson. Mostly about Life and Code."
+  },
+  "talking": {
+    "title": "Talking",
+    "description": "The few, the proud the talks I have given. Also some of my talk ideas/annoucements, etc."
+  }
+}
