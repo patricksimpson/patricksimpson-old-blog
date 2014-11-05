@@ -3,18 +3,18 @@
     div.pure-u-1.pure-u-sm-1-2.col
       div#write.block
         h2.block-title Latest Posts
+        - var count = 4, posts = [];
+        - var a = [];for(t in public.posts._data) { if(t != 'index'){a.push(t);} };a.reverse()
+        - for(n=0;n < count;n++){ posts.push(a[n]);}
         ul.list
-          - var count = 4, posts = [];
-          - var a = [];for(t in public.posts._data) { a.push(t) };a.reverse()
-          - for(n=0;n < count;n++){ posts.push(a[n]);}
-        for post in posts
+          for post in posts
             li.list--item
               a.list--link(href="/posts/#{ post }")
                 span.list-post--title= public.posts._data[post].title
                 span.list--meta.list-post--date= public.posts._data[post].date
 
     div.pure-u-1.pure-u-sm-1-2.col
-      div#talk.block_with-list
+      div#talk.block.block_with-list
         h2.block-title Talks
         ul.talk-block.list
           li.list--item
@@ -26,5 +26,5 @@
 
         h2.block-title Twitter
         div#latesttweet
-          data?
+          span Failed to load twitter data.
 !=partial('_about-me-footer')

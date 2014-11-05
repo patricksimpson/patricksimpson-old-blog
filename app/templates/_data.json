@@ -3,9 +3,9 @@
     "title": "About",
     "description": "Interesting facts about Patrick Simpson. Maybe a little too interesting..."
   },
-  "projects": {
-    "title": "Projects",
-    "description": "A list of projects by Patrick Simpson."
+  "works": {
+    "title": "Works",
+    "description": "A list of projects and talks by Patrick Simpson."
   },
   "posts": {
     "title": "Posts",

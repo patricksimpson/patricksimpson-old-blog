@@ -7,7 +7,13 @@
   .link {
     transition: all 1s;
     color: $c-nav-link;
-    padding: 1em 1.5em;
+    padding: 1em;
+
+    @media (min-width: 25em) {
+      padding: 1em 1.5em;
+      padding: 1em;
+    }
+
     display: inline-block;
     &.active {
       background-color: darken($c-nav_bg, 5%);

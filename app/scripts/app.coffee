@@ -28,5 +28,11 @@ APP =
     $('.list-post--date').each((i)->
       $(@).text(moment($(@).text()).fromNow())
     )
+    $('.post--date').each((i)->
+      $(@).text(moment($(@).text()).format('MMMM D, YYYY'))
+    )
+    $('.current-year').each((i)->
+      $(@).text(moment().format('YYYY'))
+    )
 
 APP.init()

@@ -4,23 +4,27 @@ html
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="description" content="#{ description }")
     title= title + " - Patrick Simpson"
+    // link(href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css')
     link(rel="stylesheet" href="/styles/pure-min.css")
     link(rel="stylesheet" href="/styles/grids-responsive-min.css")
     link(rel="stylesheet" href="/styles/main.css")
+    link(rel="stylesheet" href="/styles/flaticon.css")
+    link(rel="icon" href="/assets/nuclear.png" type="image/png")
   body
     div.header
-      a.site-link(href="/")
+      a.icon.flaticon-radioactive2.site-link(href="/")
         h1.site-title Patrick Simpson
         div.intro-text A software developer from Dayton, Ohio
     div.nav
       a.link(href="/" class="Home" == title ? 'active' : '') Home
       a.link(href="/posts" class="Posts" == title ? 'active' : '') Posts
-      a.link(href="/projects" class="Projects" == title ? 'active' : '') Projects
-      a.link(href="/talking" class="Talking" == title ? 'active' : '') Talking
+      a.link(href="/works" class="Works" == title ? 'active' : '') Works
       a.link(href="/about" class="About" == title ? 'active' : '') About
     div.content
       != yield
-    footer.footer Developed with purpose, 2014
+    footer
+      .footer Developed with purpose, 
+        span.current-year 2014.
 
   script(src="/scripts/vendors/bower_components/instafeed.min/index.js")
   script(src="/scripts/vendors/bower_components/jquery/dist/jquery.min.js")

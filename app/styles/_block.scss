@@ -3,6 +3,10 @@
   line-height: 1.5;
   font-size: 1.15em;
   padding: 1em 0;
+  .icon:before{
+    margin-left: 0px;
+    margin-right: 5px;
+  }
 }
 
 .block-inner {
@@ -18,7 +22,6 @@
 
 .block-title {
   font-size: 1.35em;
-  border-bottom: 1px solid #ccc;
 }
 
 .block_with-list {

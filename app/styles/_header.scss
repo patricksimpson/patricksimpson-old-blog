@@ -1,6 +1,28 @@
 .header {
   background-color: $c-header_bg;
   color: $c-light;
-  padding: 1em;
   text-align: center;
+  padding: 0;
+
+  .icon:before {
+    font-size: 100px !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+    margin-left: -33px !important;
+  }
+
+  @media (min-width: 25em) {
+    padding: 1em;
+  }
+}
+
+.site-title {
+  font-size: 2.5em;
+  padding: 0.25em;
+  margin: 0;
+  margin-top: -85px;
+}
+
+.intro-text {
+  font-size: 1.05em;
+  padding: 0.5em;
 }
