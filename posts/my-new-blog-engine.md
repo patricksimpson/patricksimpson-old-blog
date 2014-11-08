@@ -17,7 +17,7 @@ crashed and you forgot to "save a draft".
 So I stumbled upon Harp.js about 2 weeks ago. I was amazed at how simple and easy it wrapped up features that I wanted. Especially one command to create the _static_ version. 
  This was what I've wanted all along. Something simple and a joy to use.
 
-However, where it failed, *not* enough features: such as browsersync (live reload) and creating a static blog proved to be a lot of maintence. (More than I wanted to do). 
+Where it failed, *not* enough features: such as browsersync (live reload) and creating a static blog proved to be a lot of maintence. (More than I wanted to do). 
 That's where Ghost won, and I didn't want give up on that dream. Barrier to entry was one of my biggest concerns afterall.
 
 ## Gulp
