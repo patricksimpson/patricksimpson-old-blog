@@ -1,3 +1,5 @@
 {
-  "name": "patricksimpson"
+  "name": "patricksimpson",
+  "root": "dist",
+  "clean_urls": "true"
 }

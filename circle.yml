@@ -1,3 +1,10 @@
 test:
   override:
     - echo "no tests"
+deployment:
+  production:
+    branch: master
+    commands:
+      - gulp post
+      - harp compile harp dist
+      - divshot push staging
