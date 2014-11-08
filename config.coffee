@@ -170,10 +170,10 @@ gulp.task 'after:uglify', ->
   # After harp compile.
   gulp.src('dist/scripts/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('dist/scripts/'))
   gulp.src('dist/css/*.css')
     .pipe(minifyCSS())
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('dist/css/'))
 
 gulp.task 'default', ->
   runSequence('post', 'serve')
