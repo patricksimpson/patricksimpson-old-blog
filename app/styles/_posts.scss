@@ -15,4 +15,19 @@
   h1, h2, h3, h4, h5 {
     @extend .text-bold;
   }
+  img {
+    display: block;
+    border: 1px solid #999;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+
+    @media (min-width: 35em) {
+      max-width: 75%;
+    }
+
+    @media (min-width: 45em) {
+      max-width: 55%;
+    }
+  }
 }

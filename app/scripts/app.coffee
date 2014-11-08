@@ -32,7 +32,7 @@ APP =
       $(@).text(moment($(@).text()).format('MMMM D, YYYY'))
     )
     $('.current-year').each((i)->
-      $(@).text(moment().format('YYYY'))
+      $(@).text(moment().format('YYYY') + '.')
     )
 
 APP.init()
