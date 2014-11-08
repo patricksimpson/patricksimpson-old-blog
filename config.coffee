@@ -45,6 +45,8 @@ runSequence = require('gulp-run-sequence')
 replace     = require('gulp-replace')
 html2jade   = require('gulp-html2jade')
 md          = require('html-md')
+uglify      = require('gulp-uglify')
+minifyCSS    = require('gulp-minify-css')
 
 gulp.task 'serve', ->
   harp.server __dirname + '/' + HARP,
@@ -157,8 +159,28 @@ gulp.task 'post-compile', ->
   )
   es.merge.apply(es, streams)
 
+gulp.task 'before:concat', ->
+  gulp.src(HARP_SCRIPTS_DIR + 'vendors/{,*/}*.js')
+    .pipe(concat('vendors.js'))
+    .pipe(concat.header('// file: <%= file.path %>\n'))
+    .pipe(concat.footer('\n// end\n'))
+    .pipe(gulp.dest(HARP_SCRIPTS_DIR))
+
+gulp.task 'after:uglify', ->
+  # After harp compile.
+  gulp.src('dist/scripts/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./'))
+  gulp.src('dist/css/*.css')
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('./'))
+
 gulp.task 'default', ->
   runSequence('post', 'serve')
 
 gulp.task 'post', ->
-  runSequence('post-clean', 'post-setup', 'post-markdown', 'post-json','post-data', 'post-compile')
+  runSequence('post-clean', 'post-setup', 'post-markdown', 'post-json','post-data', 'post-compile', 'before')
+
+gulp.task 'before', ['before:concat']
+gulp.task 'after', ['after:uglify']
+
