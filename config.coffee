@@ -160,7 +160,7 @@ gulp.task 'post-compile', ->
   es.merge.apply(es, streams)
 
 gulp.task 'before:concat', ->
-  gulp.src(HARP_SCRIPTS_DIR + 'vendors/{,*/}*.js')
+  gulp.src(HARP_SCRIPTS_DIR + 'vendors/**/*.js')
     .pipe(concat('vendors.js'))
     .pipe(concat.header('// file: <%= file.path %>\n'))
     .pipe(concat.footer('\n// end\n'))
