@@ -1,0 +1,18 @@
+.post--title {
+  @extend .text-bold;
+  font-size: 1.65em;
+}
+
+.post--content {
+ border-top: 1px solid #eee;
+}
+
+.post--meta {
+  font-size: 0.9em;
+  color: #777;
+}
+.post--content {
+  h1, h2, h3, h4, h5 {
+    @extend .text-bold;
+  }
+}

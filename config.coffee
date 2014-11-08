@@ -90,10 +90,11 @@ postInstall = ->
   copyFiles(BASE_TEMPLATE_DIR + '*' + TEMPLATE_EXT, HARP_DIR)
   copyFiles(BASE_SCRIPTS_DIR + '*' + SCRIPT_EXT, HARP_SCRIPTS_DIR)
   copyFiles(BASE_STYLES_DIR + '*' + STYLE_EXT, HARP_STYLES_DIR)
-  copyFiles(BASE_ASSETS_DIR + '*', HARP_ASSETS_DIR)
   files = glob.sync(BASE_TEMPLATE_DIR + '*' + TEMPLATE_EXT)
-  gulp.src( [ BASE_VENDOR_DIR + '*/**' ], { "base" : "." })
+  gulp.src( [ BASE_VENDOR_DIR + '*/**' ])
     .pipe(gulp.dest(HARP_VENDOR_DIR))
+  gulp.src( [ BASE_ASSETS_DIR + '*/**' ])
+    .pipe(gulp.dest(HARP_ASSETS_DIR))
 
 gulp.task 'post-clean', (cb) ->
   del('harp', cb)

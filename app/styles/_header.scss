@@ -20,6 +20,7 @@
   padding: 0.25em;
   margin: 0;
   margin-top: -85px;
+  @extend .text-bold;
 }
 
 .intro-text {

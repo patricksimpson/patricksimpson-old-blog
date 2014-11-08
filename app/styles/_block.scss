@@ -21,6 +21,7 @@
 }
 
 .block-title {
+  @extend .text-bold;
   font-size: 1.35em;
 }
 
@@ -33,6 +34,9 @@
   color: $c-about-block-text;
 }
 
+.about-block--title {
+  @extend .text-bold;
+}
 
 .face-wrapper {
   text-align: center;
@@ -59,17 +63,4 @@
 
 .block--sub-title {
   margin: 0 0 0.5em 0;
-}
-
-.post--title {
-  font-size: 1.65em;
-}
-
-.post--content {
- border-top: 1px solid #eee;
-}
-
-.post--meta {
-  font-size: 0.9em;
-  color: #777;
 }

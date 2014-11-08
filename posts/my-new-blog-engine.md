@@ -4,8 +4,8 @@ date: November 3, 2014 @ 10:12
 synopsis: The a-typical hello world post.
 ---
 
-So I started out on this journey, building a blog that I actually enjoy. I know it has been done before...
-but this idea has been bugging me for a long time, it was finally time. With other engines, I _always_ feel like I  give up a little control.
+So I started out on this journey, building a blog engine I actually enjoy. I know it has been done before...
+but this idea has been bugging me for a long time, it was finally time. With other engines, I _always_ felt like I give up a little control. I died a little inside.
 
 Ghost was my last hope. I love Ghost's editor interface. It's barrier low barrier to entry was what won me over.
 The problem was, I felt like I lost _some_ control. It didn't give me everything I wanted. Yes, I was allowed to quickly create and edit posts, but I felt like modifying it outside
