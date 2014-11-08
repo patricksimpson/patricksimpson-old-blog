@@ -160,6 +160,7 @@ gulp.task 'post-compile', ->
   es.merge.apply(es, streams)
 
 gulp.task 'before:concat', ->
+
   gulp.src(HARP_SCRIPTS_DIR + 'vendors/**/*.js')
     .pipe(concat('vendors.js'))
     .pipe(concat.header('// file: <%= file.path %>\n'))
@@ -168,9 +169,9 @@ gulp.task 'before:concat', ->
 
 gulp.task 'after:uglify', ->
   # After harp compile.
-  gulp.src('dist/scripts/*.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/scripts/'))
+  # gulp.src('dist/scripts/*.js')
+  #   .pipe(uglify())
+  #   .pipe(gulp.dest('dist/scripts/'))
   gulp.src('dist/css/*.css')
     .pipe(minifyCSS())
     .pipe(gulp.dest('dist/css/'))
