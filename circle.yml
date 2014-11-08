@@ -7,10 +7,12 @@ deployment:
     commands:
       - ./node_modules/.bin/gulp post
       - ./node_modules/.bin/harp compile harp dist
+      - ./node_modules/.bin/gulp after
       - ./node_modules/.bin/divshot deploy staging --token $DivshotToken
   production:
     branch: master
     commands:
       - ./node_modules/.bin/gulp post
       - ./node_modules/.bin/harp compile harp dist
+      - ./node_modules/.bin/gulp after
       - ./node_modules/.bin/divshot deploy production --token $DivshotToken
