@@ -12,7 +12,7 @@ APP =
         dataType: 'json',
         success: (data) ->
           console.log data
-          date = momemnt(data.date).fromNow()
+          date = moment(data.date).fromNow()
           $("#latesttweet").html("#{data.text} <br>#{date}")
       )
 
@@ -26,8 +26,8 @@ APP =
           html = ''
           console.log data
           for i in [0..4]
-            html += "<li><img src='#{data[i].image}' alt='feed'/></li>"
-          $("#instafeed").html('<ul>' + html + '</ul>')
+            html += "<img src='#{data[i].image.url}' alt='feed'/>"
+          $("#instafeed").html(html)
       )
 
   postMetaDate: ->
