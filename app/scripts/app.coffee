@@ -5,24 +5,24 @@ APP =
     @postMetaDate()
 
   loadTwitter: ->
-    config =
-      'id': '525495582903652352'
-      'showRetweet': false
-      'domId': 'latesttweet'
-      'maxTweets': 1
-      'enableLinks': true
-    twitterFetcher.fetch(config)
+    if ('#latesttweet').length > 1
+      $.ajax(
+        url: '/__/proxy/twitter.json'
+        type: 'GET'
+        dataType: 'json',
+        success: (data) ->
+          console.log data
+      )
 
   loadInstagram: ->
-    feed = new Instafeed(
-      get: 'user',
-      userId: 235087439,
-      limit: 4,
-      sortBy: 'most-recent',
-      accessToken: '235087439.467ede5.30038cf5e86144a39b71af2972f3b0e0',
-      resolution: 'standard_resolution'
-    )
-    feed.run()
+    if ('#instafeed').length > 1
+      $.ajax(
+        url: '/__/proxy/insta.json'
+        type: 'GET'
+        dataType: 'json',
+        success: (data) ->
+          console.log data
+      )
 
   postMetaDate: ->
     $('.list-post--date').each((i)->

@@ -1,5 +1,15 @@
 {
   "name": "patricksimpson",
   "root": "dist",
-  "clean_urls": "true"
+  "clean_urls": "true",
+  "proxy": {
+    "api": {
+      "origin":"http://mydata.izerop.com",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "cookies": false,
+      "timeout": 30
+    }
+  }
 }
