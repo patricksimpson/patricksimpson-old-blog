@@ -7,7 +7,7 @@ APP =
   loadTwitter: ->
     if ('#latesttweet').length > 1
       $.ajax(
-        url: '/__/proxy/twitter.json'
+        url: '/__/proxy/api/twitter.json'
         type: 'GET'
         dataType: 'json',
         success: (data) ->
@@ -17,7 +17,7 @@ APP =
   loadInstagram: ->
     if ('#instafeed').length > 1
       $.ajax(
-        url: '/__/proxy/insta.json'
+        url: '/__/proxy/api/insta.json'
         type: 'GET'
         dataType: 'json',
         success: (data) ->
