@@ -11,9 +11,8 @@ APP =
         type: 'GET'
         dataType: 'json',
         success: (data) ->
-          console.log data
           date = moment(data.date).fromNow()
-          $("#latesttweet").html("#{data.text} <br>#{date}")
+          $("#latesttweet").html("<span class='tweet'>#{data.text}</span><br><span class='meta date'>#{date}</span>")
       )
 
   loadInstagram: ->
@@ -24,8 +23,7 @@ APP =
         dataType: 'json',
         success: (data) ->
           html = ''
-          console.log data
-          for i in [0..4]
+          for i in [0..3]
             html += "<img src='#{data[i].image.url}' alt='feed'/>"
           $("#instafeed").html(html)
       )
