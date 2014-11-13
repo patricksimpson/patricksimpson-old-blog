@@ -5,23 +5,32 @@ APP =
     @postMetaDate()
 
   loadTwitter: ->
-    if ('#latesttweet').length > 1
+    if $('#latesttweet').length > 1
       $.ajax(
         url: '/__/proxy/api/twitter.json'
         type: 'GET'
         dataType: 'json',
         success: (data) ->
-          console.log data
+          date = momemnt(data.date).fromNow()
+          $("#latesttweet").html(
+            """
+            #{data.text} <br>
+            #{date}
+            """
+          )
       )
 
   loadInstagram: ->
-    if ('#instafeed').length > 1
+    if $('#instafeed').length > 1
       $.ajax(
         url: '/__/proxy/api/insta.json'
         type: 'GET'
         dataType: 'json',
         success: (data) ->
-          console.log data
+          html = ''
+          for i in [0..4]
+            html += "<li><img src='#{data[i].image}' alt='feed'/></li>"
+          $("#instafeed").html('<ul>' + html + '</ul>')
       )
 
   postMetaDate: ->
