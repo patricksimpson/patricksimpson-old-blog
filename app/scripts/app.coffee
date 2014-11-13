@@ -5,7 +5,7 @@ APP =
     @postMetaDate()
 
   loadTwitter: ->
-    if $('#latesttweet').length > 1
+    if $('#latesttweet').length > 0
       $.ajax(
         url: '/__/proxy/api/twitter.json'
         type: 'GET'
@@ -17,7 +17,7 @@ APP =
       )
 
   loadInstagram: ->
-    if $('#instafeed').length > 1
+    if $('#instafeed').length > 0
       $.ajax(
         url: '/__/proxy/api/insta.json'
         type: 'GET'
