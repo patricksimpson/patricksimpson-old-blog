@@ -46,7 +46,8 @@ replace     = require('gulp-replace')
 html2jade   = require('gulp-html2jade')
 md          = require('html-md')
 uglify      = require('gulp-uglify')
-minifyCSS    = require('gulp-minify-css')
+minifyCSS   = require('gulp-minify-css')
+yaml        = require('gulp-yaml')
 
 gulp.task 'serve', ->
   harp.server __dirname + '/' + HARP,
@@ -66,6 +67,7 @@ gulp.task 'serve', ->
         stream: true
 
     gulp.watch [
+      BASE_DIR + 'projects.yml'
       HARP_POSTS_DIR + '/_data.json'
       ], ->
       reload()
@@ -73,6 +75,7 @@ gulp.task 'serve', ->
     gulp.watch [
       BASE_POSTS_DIR + '*.md'
       BASE_TEMPLATE_DIR + '*'
+      BASE_DIR + 'projects.yml'
       BASE_STYLES_DIR + '*'
       BASE_SCRIPTS_DIR + '*'], ['post']
 
@@ -158,6 +161,9 @@ gulp.task 'post-compile', ->
 
   )
   es.merge.apply(es, streams)
+  gulp.src(BASE_DIR + 'projects.yml')
+    .pipe(yaml({ space: 2 }))
+    .pipe(gulp.dest(BASE_DIR))
 
 gulp.task 'before:concat', ->
 
@@ -166,6 +172,11 @@ gulp.task 'before:concat', ->
     .pipe(concat.header('// file: <%= file.path %>\n'))
     .pipe(concat.footer('\n// end\n'))
     .pipe(gulp.dest(HARP_SCRIPTS_DIR))
+
+    # Extend projects and data.
+    gulp.src([BASE_DIR + 'projects.json', BASE_TEMPLATE_DIR + '_data.json'])
+      .pipe(extend('_data.json'))
+      .pipe(gulp.dest(HARP_DIR))
 
 gulp.task 'after:uglify', ->
   # After harp compile.

@@ -1,0 +1,72 @@
+---
+  projects:
+    - name: "A Static Blog Engine"
+      description: "A blog engine using, HarpJS, Gulp and BrowserSync. You could blog or hug a bear."
+      date: "2014"
+      readmore: "/posts/my-new-blog-engine"
+      github: ""
+      tech:
+        - name: "HarpJS"
+          url: "http://harpjs.com/"
+        - name: "GulpJS"
+          url: "http://gulpjs.com/"
+        - name: "BrowserSync"
+          url: "http://www.browsersync.io/"
+        - name: "Divshot"
+          url: "https://divshot.com/"
+        - name: "CircleCI"
+          url: "https://circleci.com"
+
+    - name: "Lists"
+      description: "This is a quick project to enable sharing list of tasks and/or links. Easy to use, easy to setup on your own server."
+      date: "2014"
+      readmore: ""
+      github: ""
+      tech:
+        - name: "EmberJS"
+          url: "https://www.emberjs.com/"
+        - name: "Firebase.io"
+          url: "https://www.firebase.com/"
+
+    - name: "Add Hosts"
+      description: "A little side project, to automate adding local development projects using a shell script."
+      date: "2014"
+      readmore: "http://seesparkbox.com/foundry/dont_be_a_robot._learn_shell_scripting"
+      github: "https://github.com/patricksimpson/add-host"
+      tech:
+        - name: "Bash"
+          url: "http://www.gnu.org/software/bash/"
+
+    - name: "The Table"
+      description: "For all those desiring to keep their ping pong records and scores, this may be a great starting app. Warning: this was my first Ember.js project."
+      date: "2013"
+      readmore: "https://github.com/patricksimpson/table/blob/master/README.md"
+      github: "https://github.com/patricksimpson/table"
+      tech:
+        - name: "EmberJS"
+          url: "https://www.emberjs.com/"
+        - name: "Firebase.io"
+          url: "https://www.firebase.com/"
+        - name: "CoffeeScript"
+          url: "http://www.coffeescript.org/"
+
+    - name: "Web Logo"
+      description: "This was done as a final project school project. This was an implimentation of the logo language in JavaScript. This was my first real stab at prototypical inheiritence."
+      date: "2012"
+      readmore: "https://github.com/patricksimpson/weblogo"
+      github: "https://github.com/patricksimpson/weblogo"
+      tech:
+        - name: "Paper.js"
+          url: "http://paperjs.org/"
+        - name: "jQuery"
+          url: "http://jquery.com/"
+
+    - name: "CSS Selector Tester"
+      description: "A little chrome APP that runs inside your browser. Helps you test your CSS selectors on a given page."
+      date: "2011"
+      readmore: "https://github.com/patricksimpson/CSS-Selector-Tester"
+      github: "https://github.com/patricksimpson/CSS-Selector-Tester"
+      tech:
+        - name: "jQuery.js"
+          url: "http://jquery.com/"
+
