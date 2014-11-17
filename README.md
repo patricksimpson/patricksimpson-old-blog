@@ -2,7 +2,7 @@
 
 Thanks for checking out my blog.
 
-I am currently using my own "Static Blog Generator" with Harp.js, Gulp.js, BrowserSync, Divshot and CircleCI. 
+I am currently using my own "Static Blog Generator" with Harp.js, Gulp.js, BrowserSync, Divshot and CircleCI.
 
 Feel free to read more about that here:
 

@@ -1,8 +1,7 @@
 ---
 title: Test post!
 date: 24-Oct-2014
-order: 1
-synopsis: Nice to see some new stuff out there.
+description: "This is a test"
 ---
 
 This is a markdown file.

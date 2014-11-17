@@ -1,4 +1,5 @@
 .wrapper
+  - var posts = [];for(t in public.posts._data) { if(t != 'index'){posts.push(t)} };posts.reverse()
   .block
     .post
       h1.post--title #{ title }
