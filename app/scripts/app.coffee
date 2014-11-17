@@ -12,7 +12,7 @@ APP =
         dataType: 'json',
         success: (data) ->
           date = moment(data.date).fromNow()
-          $("#latesttweet").html("<span class='tweet'>#{data.text}</span><br><span class='meta date'>#{date}</span>")
+          $("#latesttweet").html("<span class='tweet'>#{data.text}</span><br><span class='meta meta--date'>#{date}</span>")
       )
 
   loadInstagram: ->
