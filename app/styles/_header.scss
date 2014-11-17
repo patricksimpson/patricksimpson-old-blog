@@ -3,18 +3,46 @@
   color: $c-light;
   text-align: center;
   padding: 0;
+  z-index: 2;
 
   .icon:before {
     font-size: 100px !important;
-    color: rgba(255, 255, 255, 0.45) !important;
+    color: rgba(255, 255, 255, 0.35) !important;
     margin-left: -33px !important;
+
+    animation-name: spin;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-duration: 60s;
+    z-index: 1;
   }
 
   @media (min-width: 25em) {
     padding: 1em;
   }
 }
-
+@-moz-keyframes spin {
+    0% {
+        -moz-transform: scale(1) rotate(0deg);
+    }
+    50% {
+        -moz-transform: scale(1.15) rotate(180deg);
+    }
+    100% {
+        -moz-transform: scale(1) rotate(360deg);
+    }
+}
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: scale(1) rotate(0deg);
+    }
+    50% {
+        -webkit-transform: scale(1.15) rotate(180deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotate(360deg);
+    }
+}
 .site-title {
   font-size: 2.5em;
   padding: 0.25em;

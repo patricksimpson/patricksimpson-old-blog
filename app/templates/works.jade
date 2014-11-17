@@ -7,6 +7,10 @@
         div.project-description=project.description
         if project.readmore
           a(href=project.readmore).project-readmore Read more
+        if project.url
+          div.project-url
+            span Link: 
+            a(href=project.url).project-link=project.url
         div.project-github.bold Github: 
           if project.github
               a(href=project.github)=project.github
