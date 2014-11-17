@@ -98,6 +98,7 @@ postInstall = ->
   files = glob.sync(BASE_TEMPLATE_DIR + '*' + TEMPLATE_EXT)
   gulp.src(
     [BASE_VENDOR_DIR + 'jquery/dist/jquery.min.js'
+    BASE_VENDOR_DIR + 'jQuery-linkify/dist/jquery.linkify.min.js'
     BASE_VENDOR_DIR + 'moment/min/moment.min.js']
    )
     .pipe(gulp.dest(HARP_VENDOR_DIR))

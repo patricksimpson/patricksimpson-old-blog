@@ -3,3 +3,4 @@ node_modules/*
 harp/*
 dist/*
 .divshot-cache/*
+bower_components/*

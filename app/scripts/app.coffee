@@ -12,7 +12,7 @@ APP =
         dataType: 'json',
         success: (data) ->
           date = moment(data.date).fromNow()
-          $("#latesttweet").html("<span class='tweet'>#{data.text}</span><br><span class='meta meta--date'>#{date}</span>")
+          $("#latesttweet").html("<span class='tweet'>#{data.text}</span><br><span class='meta meta--date'>#{date}</span>").linkify()
       )
 
   loadInstagram: ->
@@ -20,7 +20,7 @@ APP =
       $.ajax(
         url: '/__/proxy/api/insta.json'
         type: 'GET'
-        dataType: 'json',
+       dataType: 'json',
         success: (data) ->
           html = ''
           for i in [0..3]
@@ -30,10 +30,18 @@ APP =
 
   postMetaDate: ->
     $('.list-post--date').each((i)->
-      $(@).text(moment($(@).text()).fromNow())
+      date = moment(new Date($(@).text())).fromNow()
+      if date == 'Invalid date'
+        date = $(@).text()
+
+      $(@).text(date)
     )
     $('.post--date').each((i)->
-      $(@).text(moment($(@).text()).format('MMMM D, YYYY'))
+      date = moment(new Date($(@).text())).format('MMMM D, YYYY')
+      if date == 'Invalid date'
+        date = $(@).text()
+
+      $(@).text(date)
     )
     $('.current-year').each((i)->
       $(@).text(moment().format('YYYY') + '.')
