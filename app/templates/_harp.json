@@ -1,7 +1,20 @@
 {
   "globals": {
     "title": "Home",
-    "description": "A software developer from Dayton, Ohio. Aspiring full-stack developer, Coffee Lover, and more."
+    "description": "A software developer from Dayton, Ohio. Aspiring full-stack developer, Coffee Lover, and more.",
+    "projects": [
+      {
+        "name": "Harp Gulp BrowserSync Blog Engine",
+        "description": "This very blog engine. You could blog or hug a bear.",
+        "readmore": "/posts/my-new-blog-engine",
+        "tech": [
+          {
+            "name": "HarpJS",
+            "url": "/posts/my-new-blog-engine"
+          }
+        ]
+      }
+    ]
   },
   "posts": {
     "title": "Posts",

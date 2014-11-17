@@ -3,11 +3,13 @@ title = 'Posts'
   div.block
     h2.block-title Posts
     - var posts = [];for(t in public.posts._data) { if(t != 'index'){posts.push(t)} };posts.reverse()
+    - var i = 0;
     ul.list
       for post in posts
         li.list--item
           a.list--link(href="/posts/#{ post }")
+            span= public.posts._data[post].next
             span.list-post--title= public.posts._data[post].title
-            span.list--meta.list-post--date= public.posts._data[post].date
+            span.list--meta.meta--date.post--date= public.posts._data[post].date
 
 !=partial('../_about-me-footer')

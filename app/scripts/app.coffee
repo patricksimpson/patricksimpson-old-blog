@@ -3,26 +3,31 @@ APP =
     @loadTwitter()
     @loadInstagram()
     @postMetaDate()
+    @postLinks()
 
   loadTwitter: ->
-    config =
-      'id': '525495582903652352'
-      'showRetweet': false
-      'domId': 'latesttweet'
-      'maxTweets': 1
-      'enableLinks': true
-    twitterFetcher.fetch(config)
+    if $('#latesttweet').length > 0
+      $.ajax(
+        url: '/__/proxy/api/twitter.json'
+        type: 'GET'
+        dataType: 'json',
+        success: (data) ->
+          date = moment(data.date).fromNow()
+          $("#latesttweet").html("<span class='tweet'>#{data.text}</span><br><span class='meta meta--date'>#{date}</span>")
+      )
 
   loadInstagram: ->
-    feed = new Instafeed(
-      get: 'user',
-      userId: 235087439,
-      limit: 4,
-      sortBy: 'most-recent',
-      accessToken: '235087439.467ede5.30038cf5e86144a39b71af2972f3b0e0',
-      resolution: 'standard_resolution'
-    )
-    feed.run()
+    if $('#instafeed').length > 0
+      $.ajax(
+        url: '/__/proxy/api/insta.json'
+        type: 'GET'
+        dataType: 'json',
+        success: (data) ->
+          html = ''
+          for i in [0..3]
+            html += "<img src='#{data[i].image.url}' alt='feed'/>"
+          $("#instafeed").html(html)
+      )
 
   postMetaDate: ->
     $('.list-post--date').each((i)->

@@ -27,8 +27,20 @@
 .list-post--title {
   float: left;
 }
-.list-post--date {
+.list-post--date, .meta--date {
   float: right;
   font-size: 0.75em;
   color: #777;
+}
+
+.post--content {
+  a {
+    text-decoration: underline;
+  }
+
+  pre {
+    padding: 0.5em;
+    margin: 0.5em;
+    background-color: #eee;
+  }
 }
