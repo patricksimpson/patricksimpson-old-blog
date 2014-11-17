@@ -96,8 +96,13 @@ postInstall = ->
   copyFiles(BASE_SCRIPTS_DIR + '*' + SCRIPT_EXT, HARP_SCRIPTS_DIR)
   copyFiles(BASE_STYLES_DIR + '*' + STYLE_EXT, HARP_STYLES_DIR)
   files = glob.sync(BASE_TEMPLATE_DIR + '*' + TEMPLATE_EXT)
-  gulp.src( [ BASE_VENDOR_DIR + '*/**' ])
+  gulp.src(
+    [BASE_VENDOR_DIR + 'jquery/dist/jquery.min.js'
+    BASE_VENDOR_DIR + 'moment/min/moment.min.js']
+   )
     .pipe(gulp.dest(HARP_VENDOR_DIR))
+
+  files = glob.sync(BASE_TEMPLATE_DIR + '*' + TEMPLATE_EXT)
   gulp.src( [ BASE_ASSETS_DIR + '*/**' ])
     .pipe(gulp.dest(HARP_ASSETS_DIR))
 

@@ -3,7 +3,6 @@ APP =
     @loadTwitter()
     @loadInstagram()
     @postMetaDate()
-    @postLinks()
 
   loadTwitter: ->
     if $('#latesttweet').length > 0
