@@ -14,9 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "instafeed.min": "https://raw.githubusercontent.com/stevenschobert/instafeed.js/master/instafeed.min.js",
+    "moment": "~2.8.3",
     "jquery": "~2.1.1",
-    "twitterFetcher_min": "https://raw.githubusercontent.com/jasonmayes/Twitter-Post-Fetcher/master/js/twitterFetcher_min.js",
-    "moment": "~2.8.3"
+    "jQuery-linkify": "~1.1.7"
   }
 }
