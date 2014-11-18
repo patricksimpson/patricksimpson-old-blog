@@ -2,6 +2,10 @@
   "name": "patricksimpson",
   "root": "dist",
   "clean_urls": "true",
+  "cache_control": {
+    "/assets/**": 31536000,
+    "/": 31536000
+  },
   "proxy": {
     "api": {
       "origin":"http://mydata.izerop.com",
