@@ -20,7 +20,7 @@ APP =
       $.ajax(
         url: '/__/proxy/api/insta.json'
         type: 'GET'
-       dataType: 'json',
+        dataType: 'json',
         success: (data) ->
           html = ''
           for i in [0..3]
