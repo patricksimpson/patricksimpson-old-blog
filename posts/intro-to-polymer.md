@@ -3,12 +3,12 @@ title: "Intro to Polymer"
 description: "Enter the future, of web components"
 date: "Thu Nov 20 2014 12:54:36 GMT-0500 (EST)"
 ---
-# Polymer Intro
 
-https://www.polymer-project.org/
 ## What is Polymer?
 
 An opinioned way to embrace the future, web component standards (http://w3c.github.io/webcomponents/explainer/).
+
+https://www.polymer-project.org/
 
 Big frameworks are heading this way: 
 
