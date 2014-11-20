@@ -21,7 +21,7 @@ Big frameworks are heading this way:
 (from hacker news): 
 
 When you ask "should I use Polymer", what I hear is, "should I get a jump start on the upcoming future of the web"? Lets       be clear here, Mozilla, IE, Chrome etc... are all merging on these technologies. 
-     
+
 Object observers, templating, web components etc... are all emerging, Polymer is just one way you can use them now and tie them all together in an opinionated way. 
 
 If you don't like it you don't have to use polymer you could just use plain ol JS and achieve the exact same solution,         just slightly more verbose and with less support.
@@ -33,7 +33,7 @@ You'll need polymer, run `bower install Polymer/polymer`
 
 Import Elements
 
-         <link rel="import" href="elements/my-name.html">
+    <link rel="import" href="elements/my-name.html">
 
 Why this is awsome:
 
@@ -41,17 +41,14 @@ To me, the real benefit is shared components (http://customelements.io/). For ex
 
 To use it all I needed to do was run `bower install Polymer/core-ajax`
 
-     <link rel="import" href="../bower_components/polymer/polymer.html">
-     <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
-     
-     <polymer-element name="my-name" noscript>
-     <template>
-     
-       <core-ajax url="http://polymer.dev/twitter.json" auto response="{{res}}"></core-ajax>
-       <div> Hello, my name is {{res.name}} </div>
-     
-     </template>
-     </polymer-element>
+    <link rel="import" href="../bower_components/polymer/polymer.html">
+    <link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+    <polymer-element name="my-name" noscript>
+      <template>
+        <core-ajax url="http://polymer.dev/twitter.json" auto response="{{res}}"></core-ajax>
+        <div> Hello, my name is {{res.name}} </div>
+      </template>
+    </polymer-element>
 
 ## Resources
 
