@@ -2,11 +2,12 @@
 title: "Intro to Polymer"
 description: "Enter the future, of web components"
 date: "Thu Nov 20 2014 12:54:36 GMT-0500 (EST)"
+updated: "Fri Nov 21 2014 05:52:06 GMT-0500 (EST)"
 ---
 
 ## What is Polymer?
 
-An opinionated way to embrace the future, of the web component standard (http://www.w3.org/standards/techs/components#w3c_all).
+An opinionated way to embrace the future web component standard (http://www.w3.org/standards/techs/components#w3c_all).
 
 https://www.polymer-project.org/
 
@@ -19,7 +20,7 @@ Big frameworks are doing some form of "web components"
 
 From hacker news: 
 
-When you ask "should I use Polymer", what I hear is, "should I get a jump start on the upcoming future of the web"? Lets       be clear here, Mozilla, IE, Chrome etc... are all merging on these technologies. 
+When you ask "should I use Polymer", what I hear is, "should I get a jump start on the upcoming future of the web"? Lets be clear here, Mozilla, IE, Chrome etc... are all merging on these technologies. 
 
 Object observers, templating, web components etc... are all emerging, Polymer is just one way you can use them now and tie them all together in an opinionated way. 
 
@@ -27,6 +28,7 @@ If you don't like it you don't have to use polymer you could just use plain ol J
 
 https://news.ycombinator.com/item?id=7971847
 
+In other words, if you want to start using web components, Polymer is one way to accomplish it. 
 
 ## Examples
 
@@ -38,7 +40,7 @@ Import Elements
 
 ### Why this is awsome?
 
-The real benefit is _reusability_ and _shared_ [component libraries](http://customelements.io). For example, Polymer provides [core](https://www.polymer-project.org/docs/elements/core-elements.html)  and [paper](https://www.polymer-project.org/docs/elements/paper-elements.html) elements. 
+A huge benefit is _reusability_ and _shared_ [component libraries](http://customelements.io). For example, Polymer provides [core](https://www.polymer-project.org/docs/elements/core-elements.html)  and [paper](https://www.polymer-project.org/docs/elements/paper-elements.html) elements. 
 
 To use it a core element, such as `core-ajax` all I needed to do was run: `bower install Polymer/core-ajax`
 
@@ -53,7 +55,11 @@ To use it a core element, such as `core-ajax` all I needed to do was run: `bower
 
 ### Reusability
 
-Web compontents promotes reusability, which can give your next project a jump start on framework, structure and [more](http://customelements.io). This is something I am very excited about, and will continue to monitor. For now, here is a list of resources that I have found insanely useful. 
+Web compontents promotes reusability, which can give your next project a jump start on framework, structure and [more](http://customelements.io). 
+
+Write once, reuse it, time and time again. That's music to my ears. 
+
+This is something I am very excited about, and will continue to monitor. For now, here is a list of resources that I have found insanely useful. 
 
 ## Resources
 
@@ -61,6 +67,11 @@ Web compontents promotes reusability, which can give your next project a jump st
 
  - https://www.polymer-project.org/
  - https://www.polymer-project.org/docs/polymer/polymer.html
+
+### Others
+
+ - React.js: http://facebook.github.io/react/
+ - X-Tag: http://www.x-tags.org/
 
 ### Web Components
 
