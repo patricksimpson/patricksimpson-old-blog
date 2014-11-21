@@ -1,6 +1,6 @@
 ---
 title: "Letting Go"
-date: 10 Feb 14 @ 22:16
+date: "Mon Feb 10 2014 22:16:00 GMT-0500 (EST)"
 description: "Let go of your mind trash."
 ---
 

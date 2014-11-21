@@ -1,6 +1,6 @@
 ---
 title: Automation FTW Bust Your Cache
-date: 08 Apr 14 @ 09:09
+date: "Tue Apr 08 2014 09:09:00 GMT-0400 (EDT)"
 description: "Cache busting won't solve your money problems, but it will clean up those stale CSS and JS files."
 tags:
   - name: "code"

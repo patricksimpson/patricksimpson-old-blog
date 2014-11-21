@@ -1,6 +1,6 @@
 ---
 title: "Conditional Markup, Classes, and Styles"
-date: 02 May 12 @ 12:00
+date: "Sat May 12 2012 00:00:00 GMT-0400 (EDT)"
 description: ""
 ---
 

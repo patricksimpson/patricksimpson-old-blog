@@ -1,6 +1,6 @@
 ---
 title: "Hypoplastic Left Heart Syndrome, Who Knew?"
-date: 22 May 12 @ 12:00
+date: "Tue May 22 2012 12:00:00 GMT-0400 (EDT)"
 description: ""
 ---
 

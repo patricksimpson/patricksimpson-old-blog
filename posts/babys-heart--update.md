@@ -1,6 +1,6 @@
 ---
 title: "Baby’s Heart – Update"
-date: 15 Aug 12 @ 12:00
+date: "Wed Aug 15 2012 12:00:00 GMT-0400 (EDT)"
 description: "Our baby's heart condition is complicated."
 ---
 

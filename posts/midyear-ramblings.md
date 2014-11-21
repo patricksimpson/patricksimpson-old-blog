@@ -1,6 +1,6 @@
 ---
 title: Midyear Ramblings
-date: 26 Jun 14 @ 06:50
+date: "Thu Jun 26 2014 06:50:00 GMT-0400 (EDT)"
 ---
 ##Back to Writing
 

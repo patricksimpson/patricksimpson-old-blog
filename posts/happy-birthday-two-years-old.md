@@ -1,6 +1,6 @@
 ---
 title: Happy Birthday - Two Years Old!
-date: 19 Sep 14 @ 08:30
+date: "Fri Sep 19 2014 08:30:00 GMT-0400 (EDT)"
 ---
 Today, my little girl turns two.
 

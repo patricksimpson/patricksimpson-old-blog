@@ -1,6 +1,6 @@
 ---
 title: "Samantha — Update"
-date: 10 Oct 12 @ 12:00
+date: "Wed Oct 10 2012 12:00:00 GMT-0400 (EDT)"
 description: "Samantha - Update on her condition and progress"
 ---
 

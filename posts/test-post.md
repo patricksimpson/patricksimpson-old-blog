@@ -1,6 +1,6 @@
 ---
 title: Test post!
-date: 24-Oct-2014
+date: "Fri Oct 24 2014 00:00:00 GMT-0400 (EDT)"
 description: "This is a test"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Selling our Home
-date: 03 Aug 14 @ 00:01
+date: "Sun Aug 03 2014 00:01:00 GMT-0400 (EDT)"
 ---
 ### The Process
 There are many, many things one has to do to prepare to sell their home. This is so very true, and I am living this reality as of right now. My wife and I have decided to begin the process of selling our home and see where this journey will take us. We have not yet decided fully decided where to move to, that is excitement yet to come.

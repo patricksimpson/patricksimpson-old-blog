@@ -1,6 +1,6 @@
 ---
 title: Gulp + Harp + BrowserSync = <3
-date: 1-Nov-2014
+date: "Sat Nov 01 2014 00:00:00 GMT-0400 (EDT)"
 order: 4
 synopsis: To blog like a hacker, is to blog like a slacker
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Samantha"
-date: 23 Sep 12 @ 12:00
+date: "Sun Sep 23 2012 12:00:00 GMT-0400 (EDT)"
 description: "Samantha - She's here!"
 ---
 

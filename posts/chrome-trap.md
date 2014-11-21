@@ -1,6 +1,6 @@
 ---
 title: "Chrome Trap"
-date: 17 Dec 13 @ 12:00
+date: "Tue Dec 17 2013 00:00:00 GMT-0500 (EST)"
 description: "A little Chrome Extension for Steel Trap"
 ---
 

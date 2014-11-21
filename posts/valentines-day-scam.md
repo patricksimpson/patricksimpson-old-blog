@@ -1,6 +1,6 @@
 ---
 title: "Valentines Day, Scam?"
-date: 14 Feb 14 @ 21:45
+date: "Fri Feb 14 2014 21:45:00 GMT-0500 (EST)"
 description: "This is a test"
 ---
 

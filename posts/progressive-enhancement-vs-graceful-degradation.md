@@ -1,6 +1,6 @@
 ---
 title: "Progressive Enhancement vs. Graceful Degradation"
-date: 04 Mar 11 @ 12:00
+date: "Fri Mar 04 2011 12:00:00 GMT-0500 (EST)"
 description: ""
 ---
 

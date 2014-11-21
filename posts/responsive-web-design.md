@@ -1,6 +1,6 @@
 ---
 title: "Responsive Web Design"
-date: 23 May 12 @ 12:00
+date: "Wed May 23 2012 12:00:00 GMT-0400 (EDT)"
 description: ""
 ---
 

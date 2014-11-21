@@ -1,6 +1,6 @@
 ---
 title: "The Basics of Media Queries"
-date: 30 May 12 @ 12:00
+date: "Wed May 30 2012 12:00:00 GMT-0400 (EDT)"
 description: ""
 ---
 

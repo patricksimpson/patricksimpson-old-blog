@@ -1,6 +1,6 @@
 ---
 title: My Static Markdown Blog Engine
-date: November 3, 2014 @ 10:12
+date: "Mon Nov 03 2014 22:02:00 GMT-0500 (EST)"
 description: A non-typical hello world post.
 ---
 

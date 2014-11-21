@@ -1,6 +1,6 @@
 ---
 title: Ember for Life
-date: 06 Apr 14 @ 21:24
+date: "Sun Apr 06 2014 21:24:00 GMT-0400 (EDT)"
 description: "Ember is an amazing JavaScript framework, here is why I am hooked."
 ---
 

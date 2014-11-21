@@ -1,6 +1,6 @@
 ---
 title: "Hello, 2014"
-date: 24 Jan 14 @ 23:46
+date: "Fri Jan 24 2014 23:46:00 GMT-0500 (EST)"
 description: "Hello 2014, Nice to meet you..."
 ---
 
